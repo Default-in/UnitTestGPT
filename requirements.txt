@@ -5,3 +5,4 @@ Django~=4.2.3
 gspread~=5.10.0
 oauth2client
 requests
+openai
