@@ -15,7 +15,7 @@ To utilize the first layer effectively, follow these steps:
 
 1. Create a Google Sheet and share it with the email ID: `openai@generativeai-393802.iam.gserviceaccount.com`.
 2. The Google Sheet should be in the specified format, which can be found here: [Google Sheet Format](https://docs.google.com/spreadsheets/d/1ZqR_pt8DFvfS19S11x4VUqJtHBRE5up9hkWj2sd3ETw/edit?usp=sharing).
-3. Update the Google Sheet name in the `constants.py` file. By default, the Google Sheet tab name is "Sheet1."
+3. Update the Google Sheet name in the `constants.py` file present inside `frontend/google_sheets`. By default, the sheet name is `GenAI_Templates` and the tab name is `Sheet1`.
 
 ## Second Layer - Service Layer
 
@@ -59,5 +59,14 @@ To utilize this layer, you will need two keys:
 3. Under the network tab, examine the response from the URL: https://auth0.openai.com/oauth/token
 4. Copy the access token from the response.
 
+Note: You have to update openai key and bearer token in the `.env file` file present inside `settings`.
+
 By following these steps, you will obtain both the OpenAI API key and the OpenAI Bearer Token, which are essential for accessing and using the third layer of the genAI project.
 
+
+### Setup of .ENV file
+1. .env file contains all the important credentials and tokens required for the project to run.
+2. don't forget to add .env file in .gitignore file.
+3. for local environment, you can use the .env.example file and rename it to .env.local and add the credentials.
+4. for production environment, you can use the .env.example file and rename it to .env.prod and add the credentials.
+5. for development environment, you can use the .env.example file and rename it to .env.dev and add the credentials.
