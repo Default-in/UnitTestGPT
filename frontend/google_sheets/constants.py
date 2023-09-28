@@ -7,5 +7,5 @@ class GoogleSheetsConstants:
     COL_NUMBER = 3
     ROW_NUMBER = 2
 
-    SHEET_NAME = "GenAI_Templates"
+    SHEET_NAME = "Code Generation Test"
     TAB_NAME = "Sheet1"
