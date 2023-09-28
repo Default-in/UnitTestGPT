@@ -34,7 +34,7 @@ config = Config(RepositoryEnv(DOTENV_FILE))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-v)8b32d7c&_9!sm3ymbvmj13jugei4le2(06=5eb@e$k-r6!px"
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,4 +138,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 OPENAI_API_KEY = config("OPENAI_API_KEY")
-CHAT_GPT_LOGIN_BEARER_TOKEN = config("CHAT_GPT_LOGIN_BEARER_TOKEN")
+OPENAI_ORGANIZATION_ID = config("OPENAI_ORGANIZATION_ID")

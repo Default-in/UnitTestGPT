@@ -41,3 +41,9 @@ class GoogleSheet:
         This function writes data to the sheet.
         """
         self.sheet.update_cell(self.row_number, self.col_number, data)
+
+    def write_row(self, data):
+        """
+        This function writes data to the sheet.
+        """
+        self.sheet.append_row(data)

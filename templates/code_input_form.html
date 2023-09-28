@@ -1,0 +1,20 @@
+<!-- appname/templates/code_input_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Input Form</title>
+</head>
+<body>
+    <h1>Code Input Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <textarea>{{ result }}</textarea>
+    {% endif %}
+</body>
+</html>
