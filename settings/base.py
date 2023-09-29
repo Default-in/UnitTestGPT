@@ -19,8 +19,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 host_name = socket.gethostname()
 
-print(f"host_name:{host_name}")
-
 if host_name == "develop":
     DOTENV_FILE = f"{BASE_DIR}/settings/.env.dev"
 elif host_name == "prod":
@@ -126,6 +124,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+'''Celery Setup'''
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = "redis://localhost:6379"
+CELERY_TIMEZONE = 'Asia/Kolkata'
+CELERY_CREATE_MISSING_QUEUES = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -13,10 +13,10 @@ def process_code(code, initial_language, target_language, action):
         if action == 'translate':
             process, result = translate_code(initial_code=code, initial_language=initial_language,
                                              target_language=target_language)
-            # write_code_generation_data_into_google_sheet(action=action, initial_language=initial_language,
-            #                                              input_code=code, target_language=target_language,
-            #                                              unit_test_package="", result=result,
-            #                                              process=str(process))
+            write_code_generation_data_into_google_sheet.delay(action=action, initial_language=initial_language,
+                                                               input_code=code, target_language=target_language,
+                                                               unit_test_package="", result=result,
+                                                               process=str(process))
         else:
             if initial_language == PYTHON:
                 unit_test_package = UnitTestPackageAccordingToLanguage.python
